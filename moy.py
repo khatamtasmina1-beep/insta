@@ -48,7 +48,7 @@ def check_user_membership(message):
                 has_photo = photos.total_count > 0
             except Exception:
                 has_photo = False
-            caption_text = f"𝗛𝗜 👋 *{message.from_user.first_name}* \n\n‼ 🔒𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗜𝗡𝗦𝗧𝗔𝗚𝗥𝗔𝗠 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 𝗕𝗢𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗗𝗘𝗡𝗜𝗘𝗗 ! 🔒 \n\n🔒 *𝗝𝗼𝗶𝗻 𝗼𝘂𝗿 𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘁𝗼 𝘂𝘀𝗲 𝗵𝗶 𝗯𝗼𝘁 !! "
+            caption_text = f"𝗛𝗜 👋 *{message.from_user.first_name}* \n\n‼ 🔒𝗠𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗜𝗡𝗦𝗧𝗔𝗚𝗥𝗔𝗠 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗥 𝗕𝗢𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗗𝗘𝗡𝗜𝗘𝗗 ! 🔒 \n\n🔒 *𝗝𝗼𝗶𝗻 𝗼𝘂𝗿 𝗼𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁 !! "
             if has_photo:
                 try:
                     photo_file_id = photos.photos[0][0].file_id
@@ -96,16 +96,16 @@ def send_welcome(message):
     user_id = message.from_user.id
 
     markup = telebot.types.InlineKeyboardMarkup()
-    button1 = telebot.types.InlineKeyboardButton(text="[➖ 𝗢𝗡𝗧𝗔𝗖𝗧 𝗢𝗪𝗡𝗥 ➖]", url=OWNER_URL, style="primary")
-    button2 = telebot.types.InlineKeyboardButton(text="[➖ 𝗔𝗶𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ➖]", url=CHANNEL_URL, style="danger")
-    button3 = telebot.types.InlineKeyboardButton(text="[➖ |  𝘅 𝗗™ 𝗟𝗟 𝗢𝗧𝗦  | ➖]", url=BOT_LIST, style="success")
+    button1 = telebot.types.InlineKeyboardButton(text="[➖ 𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗢𝗪𝗡𝗘𝗥 ➖]", url=OWNER_URL, style="primary")
+    button2 = telebot.types.InlineKeyboardButton(text="[➖ 𝗠𝗔𝗶𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ➖]", url=CHANNEL_URL, style="danger")
+    button3 = telebot.types.InlineKeyboardButton(text="[➖ | 𝗠 𝘅 𝗗™ 𝗔𝗟𝗟 𝗢𝗧𝗦  | ➖]", url=BOT_LIST, style="success")
     markup.add(button1)
     markup.add(button2)
     markup.add(button3)
 
     welcome_text = (
         "𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗠𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗜𝗡𝗦𝗧𝗔𝗚𝗥𝗔𝗠 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 𝗕𝗢𝗧\n\n"
-        " 𝗣𝗹𝗲𝗮𝗲 𝘀𝗻𝗱 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗜𝗻𝘀𝘁𝗴𝗿𝗮𝗺 𝗩𝗶𝗱𝗲𝗼 / 𝗥𝗲𝗲𝗹 𝗹𝗶𝗻𝗸, 𝗜 𝗶𝗹 𝗱𝗼𝗻𝗹𝗮𝗱 𝗶𝘁 𝗳𝗼𝗿 𝘆𝗼𝘂 👀 !!\n\n"
+        " 📎 𝗣𝗹𝗲𝗮𝘀𝗲 𝘀𝗲𝗻𝗱 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗩𝗶𝗱𝗲𝗼 / 𝗥𝗲𝗲𝗹 𝗹𝗶𝗻𝗸, 𝗜 𝘄𝗶𝗹𝗹 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗶𝘁 𝗳𝗼𝗿 𝘆𝗼𝘂 👀  !!\n\n"
     )
 
     try:
@@ -159,7 +159,7 @@ def download_reel_with_caption(message):
     url = message.text.strip()
 
     # Send the processing message instantly
-    processing_msg = bot.reply_to(message, "⏳ 𝗣𝗿𝗼𝗰𝗲𝘀𝗻𝗴 𝗼𝘂𝗿 𝗿𝗲𝗾𝘂𝗲𝘀𝘁𝗲𝗱 𝗹𝗶𝗻𝗸.......")
+    processing_msg = bot.reply_to(message, "⏳ 𝗣𝗿𝗼𝗰𝗲𝘀𝗶𝗻𝗴 𝘆𝗼𝗿 𝗿𝗲𝗾𝘂𝗲𝘁𝗲𝗱 𝗹𝗶𝗻𝗸...........")
 
     try:
         # === UPDATED API WITH HEADERS TO FIX 403 ===
@@ -199,28 +199,28 @@ def download_reel_with_caption(message):
 
                 if not video_url:
                     bot.edit_message_text(
-                        "‼ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗲𝘁𝗰𝗵 𝘃𝗶𝗱𝗲𝗼. 𝗠𝗶𝘀𝘀𝗶𝗻𝗴 𝗼𝗿 𝗶𝗻𝘃𝗮𝗹𝗶𝗱 𝘃𝗱𝗲𝗼 𝗨𝗥𝗟 𝗶𝗻 𝗔𝗣𝗜 𝗿𝗲𝘀𝗽𝗼𝗻𝘀.‼",
+                        "‼ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗲𝘁𝗰𝗵 𝘃𝗶𝗱𝗲𝗼. 𝗠𝗶𝘀𝘀𝗶𝗻𝗴 𝗼𝗿 𝗶𝗻𝘃𝗮𝗹𝗶𝗱 𝘃𝗶𝗱𝗲𝗼 𝗨𝗥𝗟 𝗶𝗻 𝗔𝗣𝗜 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗲.‼",
                         chat_id=message.chat.id,
                         message_id=processing_msg.message_id
                     )
                     return
             else:
                 bot.edit_message_text(
-                    "‼ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗲𝘁𝗰𝗵 𝘃𝗱𝗲. 𝗔𝗣𝗜 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗲 𝗶𝘀 𝗲𝗺𝗽𝘁𝘆 𝗼𝗿 𝗶𝗻𝘃𝗮𝗹𝗶𝗱.‼",
+                    "‼ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗲𝘁𝗰𝗵 𝘃𝗶𝗱𝗲𝗼. 𝗔𝗣𝗜 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗲 𝗶𝘀 𝗲𝗺pty 𝗼𝗿 𝗶𝗻𝘃𝗮𝗹𝗶𝗱.‼",
                     chat_id=message.chat.id,
                     message_id=processing_msg.message_id
                 )
                 return
         else:
             bot.edit_message_text(
-                f"‼ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗲𝘁𝗰𝗵 𝘃𝗱𝗲𝗼. 𝗔𝗣𝗜 𝘃𝟐 𝗿𝗲𝘀𝗽𝗼𝗻𝗱𝗲𝗱 𝘄𝗶𝗵: {response.status_code}‼",
+                f"‼ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗳𝗲𝘁𝗰𝗵 𝘃𝗶𝗱𝗲𝗼. 𝗔𝗣𝗜 𝘃𝟐 𝗿𝗲𝘀𝗽𝗼𝗻𝗱𝗲𝗱 𝘄𝗶𝘁𝗵: {response.status_code}‼",
                 chat_id=message.chat.id,
                 message_id=processing_msg.message_id
             )
             return
 
         # Use default caption only (removed API caption extraction)
-        footer = "\n\n🎥 𝗛𝗲𝗿𝗲 𝗶𝘀 𝘆𝗼𝗿 𝗿𝗲𝗾𝘂𝗲𝘁𝗲 𝗥𝗲𝗹 👀 𝗽𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 @instra_dwn_bymrin_bot ❤️\n\n"
+        footer = "\n\n\n  🎥 𝗛𝗲𝗿𝗲 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗿𝗲𝗾𝘂𝗲𝘀𝘁𝗲𝗱 𝗥𝗲𝗲𝗹 👀 𝗽𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 @instra_dwn_bymrin_bot ❤️\n\n"
         
         # Ensure combined caption does not exceed 1024 characters
         if len(footer) > 1024:
@@ -233,7 +233,7 @@ def download_reel_with_caption(message):
             pass
 
         # Send the progress message when the video is found
-        progress_msg = bot.reply_to(message, "➖ 𝗶𝗱𝗼 𝗙𝗼𝘂𝗻𝗱 ! 𝗗𝗼𝗻𝗹𝗮𝗱𝗶𝗻𝗴 ⤵ ")
+        progress_msg = bot.reply_to(message, "➖ 𝗩𝗶𝗱𝗲𝗼 𝗙𝗼𝘂𝗻𝗱 ! 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴 ⤵ ")
         threading.Thread(target=delete_after_delay, args=(progress_msg.chat.id, progress_msg.message_id)).start()
 
         # Download video content first, then send as file
@@ -252,23 +252,23 @@ def download_reel_with_caption(message):
                 caption=footer
             )
         except Exception as e:
-            bot.reply_to(message, f"⚠️ 𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝘀𝗲𝗻𝗱 𝘃𝗶𝗱𝗲𝗼. 𝗘𝗿𝗿𝗼𝗿 : {str(e)}")
+            bot.reply_to(message, f"⚠️ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝘀𝗲𝗻𝗱 𝘃𝗶𝗱𝗲𝗼. 𝗘𝗿𝗿𝗼𝗿 : {str(e)}")
             return
 
         # Notify the user that the bot is ready for the next request
         bot.send_message(
             message.chat.id,
-            "𝗜 𝗮𝗺 𝗿𝗲𝗮𝗱𝘆 𝗳𝗼𝗿 𝘆𝗼𝘂 𝗻𝗲𝘁 𝘃𝗱𝗲𝗼.... 𝗞𝗶𝗻𝗱𝗹𝘆 𝗲𝗻𝗱 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗩𝗶𝗱𝗲𝗼 / 𝗿𝗲𝗹 𝗹𝗻𝗸,  𝘄𝗶𝗹𝗹 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗶𝘁 𝗳𝗼𝗿 𝘆𝘂 👀 \n\n[ 𝗕𝗢𝗧 𝗖𝗥𝗘𝗔𝗧𝗘𝗗 𝗕𝗬 > ー @M_o_Y_zZz ]"
+            "𝗜 𝗮𝗺 𝗿𝗲𝗮𝗱𝘆 𝗳𝗼𝗿 𝘆𝗼𝘂𝗿 𝗻𝗲𝘅𝘁 𝘃𝗶𝗱𝗲𝗼.... 𝗞𝗶𝗻𝗱𝗹𝘆 𝘀𝗲𝗻𝗱 𝗮 𝘃𝗮𝗹𝗶𝗱 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗩𝗶𝗱𝗲𝗼 / 𝗿𝗲𝗲𝗹 𝗹𝗶𝗻𝗸, 𝗜 𝘄𝗶𝗹𝗹 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗶𝘁 𝗳𝗼𝗿 𝘆𝗼𝘂 👀 \n\n[ 𝗕𝗢𝗧 𝗖𝗥𝗘𝗔𝗧𝗘𝗗 𝗕𝗬 > ー @M_o_Y_zZz ]"
         )
     except requests.RequestException as e:
         bot.edit_message_text(
-            f"⚠️ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗰𝗼𝗻𝗻𝗲𝗰𝘁 𝘁 𝗦𝗲𝗿𝘃𝗲𝗿 ⚠️ : {str(e)}",
+            f"⚠️ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗰𝗼𝗻𝗻𝗲𝗰𝘁 𝘁𝗼 𝗦𝗲𝗿𝘃𝗲𝗿 ⚠️ : {str(e)}",
             chat_id=message.chat.id,
             message_id=processing_msg.message_id
         )
     except Exception as e:
         bot.edit_message_text(
-            f"️ ⚠️ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗽𝗿𝗼𝗰𝗲𝘀𝘀 𝘆𝗼𝘂𝗿 𝗿𝗲𝗾𝘂𝘀𝘁 ⚠️  : {str(e)}",
+            f"️ ⚠️ 𝗙𝗮𝗶𝗹𝗲𝗱 𝘁𝗼 𝗽𝗿𝗼𝗰𝗲𝘀𝘀 𝘆𝗼𝘂𝗿 𝗿𝗲𝗾𝘂𝗲𝘀𝘁 ⚠️  : {str(e)}",
             chat_id=message.chat.id,
             message_id=processing_msg.message_id
         )
