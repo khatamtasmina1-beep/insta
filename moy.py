@@ -278,5 +278,5 @@ def ignore_message(message):
     pass
 
 if __name__ == '__main__':
-    print("iNSTA DoWNLOADER Bot is running...")
+    print(" Bot is running...")
     bot.infinity_polling()
